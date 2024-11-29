@@ -134,3 +134,6 @@ enableWebService: true
 
 podLabels: {}
 podAnnotations: {}
+
+serviceMonitor:
+  enabled: false
