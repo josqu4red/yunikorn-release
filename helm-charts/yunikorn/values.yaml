@@ -36,6 +36,9 @@ pluginImage:
 nodeSelector: {}
 tolerations: []
 affinity: {}
+securityContext:
+  runAsUser: 4444
+  runAsGroup: 4444
 
 configuration: null    # deprecated; use queues.yaml in yunikornDefaults
 operatorPlugins: null  # deprecated; use service.operatorPlugins in yunikornDefaults
@@ -60,6 +63,9 @@ admissionController:
   nodeSelector: {}
   tolerations: []
   affinity: {}
+  securityContext:
+    runAsUser: 4444
+    runAsGroup: 4444
   service:
     type: ClusterIP
   processNamespaces: null # deprecated; use admissionController.filtering.processNamespaces in yunikornDefaults

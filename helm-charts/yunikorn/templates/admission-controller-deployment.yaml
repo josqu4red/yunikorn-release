@@ -73,6 +73,10 @@ spec:
       {{- with .Values.admissionController.priorityClassName }}
       priorityClassName: {{ . }}
       {{- end }}
+      {{- with .Values.admissionController.securityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.admissionController.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
